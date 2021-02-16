@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--リニアレイアウト・・・レイアウトを縦（横）に並べる-->
+<!--android:orientation="vertical"・・・縦に並べる-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!--TextView
+    android:id="@+id/hoge"・・・TextViewにid(名前)をつける
+    android:layout_width ・・・幅
+    android:layout_height・・・高さ
+    　１match_parent・・・親要素の高さ、幅
+    　２wrap_content・・・余白なしのぴったり
+    　３好きなサイズ
+    android:paddingLeft="10dp"・・・左に余白
+    android:gravity="center_vertical"・・・レイアウトの上下中央に配置-->
+
+
+    <!--フレームレイアウト・・・要素を重ねることができるレイアウト
+    -->
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <!--イメージビュー
+        android:src="@drawable/hoge"・・・場所を指定し画像を参照する-->
+
+        <TextView
+            android:id="@+id/turnLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:text="✖️の番です"
+            android:layout_gravity="center_horizontal"
+            android:elevation="0dp"
+            android:textSize="40dp" />
+
+
+        <ImageView
+            android:id="@+id/lattice"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:src="@drawable/lattice" />
+
+    </FrameLayout>
+
+</LinearLayout>
